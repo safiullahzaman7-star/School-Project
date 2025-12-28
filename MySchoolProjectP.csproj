@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C501B953-FDB9-43B2-A1CE-7862E75C232A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MySchoolProject</RootNamespace>
+    <AssemblyName>MySchoolProject</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admission\Admission_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admission\Admission_Form.Designer.cs">
+      <DependentUpon>Admission_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admission\Class_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admission\Class_Form.Designer.cs">
+      <DependentUpon>Class_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBAccess\connectionClass.cs" />
+    <Compile Include="DBAccess\DBGenral.cs" />
+    <Compile Include="Employee_Section\Add_Status_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee_Section\Add_Status_form.Designer.cs">
+      <DependentUpon>Add_Status_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee_Section\ALL_Employee_Table_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee_Section\ALL_Employee_Table_Form.Designer.cs">
+      <DependentUpon>ALL_Employee_Table_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee_Section\Employee_Edit_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee_Section\Employee_Edit_Form.Designer.cs">
+      <DependentUpon>Employee_Edit_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee_Section\Employee_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee_Section\Employee_form.Designer.cs">
+      <DependentUpon>Employee_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee_Section\Employee_Salay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee_Section\Employee_Salay.Designer.cs">
+      <DependentUpon>Employee_Salay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee_Section\Employee_Search_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee_Section\Employee_Search_Form.Designer.cs">
+      <DependentUpon>Employee_Search_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee_Section\Employee_Type_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee_Section\Employee_Type_Form.Designer.cs">
+      <DependentUpon>Employee_Type_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee_Section\Salary_Table_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee_Section\Salary_Table_form.Designer.cs">
+      <DependentUpon>Salary_Table_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fee_Section\Fee_Detalis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fee_Section\Fee_Detalis.Designer.cs">
+      <DependentUpon>Fee_Detalis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fee_Section\Fee_List_With_Students_Names.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fee_Section\Fee_List_With_Students_Names.Designer.cs">
+      <DependentUpon>Fee_List_With_Students_Names.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fee_Section\Fee_Master.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fee_Section\Fee_Master.Designer.cs">
+      <DependentUpon>Fee_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fee_Section\Fee_Section_Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fee_Section\Fee_Section_Form2.Designer.cs">
+      <DependentUpon>Fee_Section_Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fee_Section\Fee_Type.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fee_Section\Fee_Type.Designer.cs">
+      <DependentUpon>Fee_Type.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Student_Section\Edit_Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student_Section\Edit_Student.Designer.cs">
+      <DependentUpon>Edit_Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student_Section\Student_Regestration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student_Section\Student_Regestration.Designer.cs">
+      <DependentUpon>Student_Regestration.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admission\Admission_Form.resx">
+      <DependentUpon>Admission_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admission\Class_Form.resx">
+      <DependentUpon>Class_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee_Section\Add_Status_form.resx">
+      <DependentUpon>Add_Status_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee_Section\ALL_Employee_Table_Form.resx">
+      <DependentUpon>ALL_Employee_Table_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee_Section\Employee_Edit_Form.resx">
+      <DependentUpon>Employee_Edit_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee_Section\Employee_form.resx">
+      <DependentUpon>Employee_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee_Section\Employee_Salay.resx">
+      <DependentUpon>Employee_Salay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee_Section\Employee_Search_Form.resx">
+      <DependentUpon>Employee_Search_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee_Section\Employee_Type_Form.resx">
+      <DependentUpon>Employee_Type_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee_Section\Salary_Table_form.resx">
+      <DependentUpon>Salary_Table_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fee_Section\Fee_Detalis.resx">
+      <DependentUpon>Fee_Detalis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fee_Section\Fee_List_With_Students_Names.resx">
+      <DependentUpon>Fee_List_With_Students_Names.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fee_Section\Fee_Master.resx">
+      <DependentUpon>Fee_Master.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fee_Section\Fee_Section_Form2.resx">
+      <DependentUpon>Fee_Section_Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fee_Section\Fee_Type.resx">
+      <DependentUpon>Fee_Type.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Student_Section\Edit_Student.resx">
+      <DependentUpon>Edit_Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student_Section\Student_Regestration.resx">
+      <DependentUpon>Student_Regestration.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
